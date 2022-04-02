@@ -19,7 +19,7 @@ router.get('/',function(req,res){
    
   });
   router.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/css/styles.css'));
+    res.sendFile(path.join(__dirname+'/css/main.css'));
    
   });
   
