@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "portfolio website",
+  "description": "jhon portfolio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,15 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/eztatik/jhon-portfolio.git"
   },
-  "author": "Jhon",
+  "author": "Jhon Romero",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eztatik/jhon-portfolio/issues"
   },
   "homepage": "https://github.com/eztatik/jhon-portfolio#readme",
   "dependencies": {
-    "express": "^4.17.3",
-    "nodemon": "^2.0.15",
-    "winston": "^3.6.0"
+    "express": "^4.17.3"
   }
 }
