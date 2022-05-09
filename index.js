@@ -4,6 +4,8 @@ const path = require('path');
 const router = express.Router();
 const bodyParser = require('body-parser');
 var http = require('http');
+const methodOverride = require('method-override');
+
 
 
 
@@ -55,12 +57,17 @@ router.get('/',function(req,res){
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
+
 //I had to move the routes below the bodyParser so body.name would be read by the form in the html page
-require('./startup/routes')(app);
 router.get('/form',function(req,res){
   res.sendFile(path.join(__dirname+'/form.html'));
  
 });
+
+
+require('./startup/routes')(app);
+
 app.use('/', router);
 
 app.listen(process.env.port || 3000);
