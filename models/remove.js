@@ -3,10 +3,10 @@ const router = express.Router();
 const {Author, validate} = require('./author');
 
 
-router.delete('/:id', async (req, res) => {
-  const { error } = validate(req.body);
-  if(error) return res.status(400).send(error.details[0].message);
-    const author = await Author.findByIdAndRemove(req.params.id);
+router.delete('/{{gone}}', async (req, res) => {
+  //const { error } = validate(req.body);
+  //if(error) return res.status(400).send(error.details[0].message);
+    const author = await Author.findByIdAndRemove(req.body.id);
   
     res.send(author);
   });

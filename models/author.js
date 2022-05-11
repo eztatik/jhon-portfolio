@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 const authorSchema = new mongoose.Schema({
     id: {
-        type: String,
+        type: mongoose.SchemaTypes.ObjectId
         
     },
     name: {   

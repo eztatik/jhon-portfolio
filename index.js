@@ -59,14 +59,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+
+
+
+require('./startup/routes')(app);
 //I had to move the routes below the bodyParser so body.name would be read by the form in the html page
 router.get('/form',function(req,res){
   res.sendFile(path.join(__dirname+'/form.html'));
  
 });
-
-
-require('./startup/routes')(app);
 
 app.use('/', router);
 

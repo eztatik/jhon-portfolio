@@ -7,9 +7,9 @@
     <form action="/api/add" method="post">
         <fieldset>
           <h3>Add new employee</h3>
-          <label for="name">ID:</label>
+          <!-- <label for="name">ID:</label>
           <input type="text" id="id" name="id" placeholder="Enter your full name" />
-        <br><br>
+        <br><br> -->
           <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" />
           <br><br>
@@ -17,7 +17,7 @@
         </fieldset>
       </form>
 
-      <form action="/api/find" method="get">
+      <form action="/api/find/view" method="post">
         <fieldset>
           <h3>Find Author</h3>
           <label for="id">ID:</label>
@@ -30,14 +30,14 @@
         </fieldset>
       </form>
 
-      <form action="/api/remove/{{id}}?_method=DELETE" method="post">
+      <form action="/api/remove/{{gone}}?_method=DELETE" method="post">
         <fieldset>
           <h3>Delete Author</h3>
-          <label for="remove">ID:</label>
-          <input type="text" id="remove" name="remove" placeholder="Enter employee ID" />
-        <br><br>
+          <label for="id">ID:</label>
+          <input type="text" id="id" name="id" placeholder="Enter employee ID" />
+        <!-- <br><br>
           <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" />
+            <input type="text" id="name" name="name" placeholder="Enter your full name" /> -->
           <br><br>
           <input type ="submit" value="find">
         </fieldset>
