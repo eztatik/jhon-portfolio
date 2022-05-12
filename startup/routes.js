@@ -2,6 +2,7 @@ const express = require('express');
 const find = require('../models/find');
 const add = require('../models/add');
 const remove = require('../models/remove');
+const update = require('../models/update');
 
 //const backend = require('./backend');
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/api/add', add);
 app.use('/api/find', find);
 app.use('/api/remove', remove);
+app.use('/api/update', update);
 
 //app.use('/api/backend', backend);
 
